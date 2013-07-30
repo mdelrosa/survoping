@@ -1,0 +1,20 @@
+application: survo-mailer
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /.*
+  script: survoping.application
+- url: /stylesheets
+  static_dir: stylesheets
+- url: /ping
+  script: survoping.application
+  login: admin
+
+libraries:
+-  name: webapp2
+   version: latest
+-  name: jinja2
+   version: latest

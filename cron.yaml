@@ -1,0 +1,4 @@
+cron:
+- description: email pinger for survo
+  url: /ping
+  schedule: every 15 minutes
